@@ -194,8 +194,8 @@ with tab_budget:
                 st.plotly_chart(fig, use_container_width=True)
 
                 # pass-through info
-                st.markdown(f"💡 Passing **${result['savings']:,.2f}/month** to Savings tab "
-                            f"and **${st.session_state['weekly_food']:,.2f}/week** to Grocery tab")
+                st.markdown(f"💡 Passing **\\${result['savings']:,.2f}/month** to Savings tab "
+                            f"and **\\${st.session_state['weekly_food']:,.2f}/week** to Grocery tab")
                 # ── Sensitivity analysis — tradeoff explorer ──────────────────
                 st.subheader("Sensitivity Analysis")
                 st.caption("How does changing your savings rate affect your entertainment budget?")
@@ -252,8 +252,8 @@ with tab_budget:
                 extra_saved = round(disposable * (next_rate - savings_pct) / 100, 2)
                 st.markdown(
                     f"At **{savings_pct}% savings**: every 10% more you save costs you "
-                    f"**${cost_per_10:.2f}** of entertainment. "
-                    f"Going to **{next_rate}%** would save an extra **${extra_saved:.2f}/month**."
+                    f"**\\${cost_per_10:.2f}** of entertainment. "
+                    f"Going to **{next_rate}%** would save an extra **\\${extra_saved:.2f}/month**."
                 )
 
                 # binding constraint callout — simplified to one useful line
@@ -426,9 +426,11 @@ with tab_grocery:
         st.success("Optimal procurement plan found!")
 
         m1, m2, m3, m4, m5 = st.columns(5)
-        m1.metric("Weekly budget",    f"${result['weekly_budget']:,.2f}")
-        m2.metric("Total cost",       f"${result['total_cost']:,.2f}",
-                  f"${result['remaining']:,.2f} left")
+        remaining = result["remaining"]
+        remaining_label = (f"${remaining:,.2f} left" if remaining >= 0
+                           else f"-${abs(remaining):,.2f} over budget")
+        m1.metric("Weekly budget", f"${result['weekly_budget']:,.2f}")
+        m2.metric("Total cost",    f"${result['total_cost']:,.2f}", remaining_label)
         m3.metric("Daily calories",   f"{result['daily_calories']:,.0f} kcal",
                   f"{result['cal_pct']}% of target")
         m4.metric("Daily protein",    f"{result['daily_protein']}g",
