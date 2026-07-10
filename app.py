@@ -435,9 +435,9 @@ with tab_grocery:
                   f"{result['cal_pct']}% of target")
         m4.metric("Daily protein",    f"{result['daily_protein']}g",
                   f"{result['protein_pct']}% of target")
-        m5.metric("Avg food quality", f"{result['avg_quality']}/10")
+        m5.metric("Nutrition Score", f"{result['avg_quality']}/10")
 
-        st.subheader("Procurement order")
+        st.subheader("Shopping List")
         st.caption("Items sorted by cost descending — biggest spend first")
         sorted_list = sorted(result["shopping_list"], key=lambda x: x["cost"], reverse=True)
         for item in sorted_list:
