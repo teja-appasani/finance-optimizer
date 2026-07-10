@@ -13,7 +13,7 @@ FOODS = [
      "package_unit": "lb pack",       "package_size": 1,    "package_cost": 8.00},
     {"name": "Frozen salmon",    "fine_unit": "fillet","cost": 3.00,  "cal": 350,  "protein": 34,  "carbs": 0,   "quality_score": 10, "min_qty": 3,  "max_qty": 3,
      "package_unit": "3-fillet bag",  "package_size": 3,    "package_cost": 9.00},
-    {"name": "Eggs",             "fine_unit": "egg",   "cost": 0.12,  "cal": 70,   "protein": 6,   "carbs": 0.5, "quality_score": 10, "min_qty": 0,  "max_qty": 24,
+    {"name": "Eggs",             "fine_unit": "egg",   "cost": 0.12,  "cal": 70,   "protein": 6,   "carbs": 0.5, "quality_score": 10, "min_qty": 1,  "max_qty": 12,
      "package_unit": "dozen",         "package_size": 12,   "package_cost": 1.47},
     # ── Dairy ─────────────────────────────────────────────────────────────────
     {"name": "Greek yogurt",     "fine_unit": "cup",   "cost": 0.88,  "cal": 130,  "protein": 23,  "carbs": 9,   "quality_score": 8,  "min_qty": 4,  "max_qty": 8,
@@ -31,12 +31,12 @@ FOODS = [
      "package_unit": "pack (10ct)",   "package_size": 1,    "package_cost": 2.00},
     {"name": "Bread",            "fine_unit": "slice", "cost": 0.20,  "cal": 80,   "protein": 3,   "carbs": 14,  "quality_score": 6,  "min_qty": 20, "max_qty": 60,
      "package_unit": "loaf (20ct)",   "package_size": 20,   "package_cost": 4.00},
-    {"name": "Brown rice",       "fine_unit": "lb",    "cost": 0.52,  "cal": 1685, "protein": 35,  "carbs": 350, "quality_score": 7,  "min_qty": 1,  "max_qty": 6,
+    {"name": "Brown rice",       "fine_unit": "lb",    "cost": 0.52,  "cal": 1685, "protein": 35,  "carbs": 350, "quality_score": 7,  "min_qty": 0,  "max_qty": 6,
      "package_unit": "32oz bag",      "package_size": 2,    "package_cost": 1.67},
     {"name": "Oats",             "fine_unit": "lb",    "cost": 1.68,  "cal": 1700, "protein": 57,  "carbs": 306, "quality_score": 9,  "min_qty": 0,  "max_qty": 4,
      "package_unit": "42oz canister", "package_size": 2.6,  "package_cost": 4.38},
     # ── Vegetables ────────────────────────────────────────────────────────────
-    {"name": "Potatoes",         "fine_unit": "lb",    "cost": 0.76,  "cal": 350,  "protein": 9,   "carbs": 79,  "quality_score": 7,  "min_qty": 0,  "max_qty": 5,
+    {"name": "Potatoes",         "fine_unit": "lb",    "cost": 0.76,  "cal": 350,  "protein": 9,   "carbs": 79,  "quality_score": 8,  "min_qty": 0,  "max_qty": 5,
      "package_unit": "5lb bag",       "package_size": 5,    "package_cost": 3.80},
     {"name": "Spinach",          "fine_unit": "bag",   "cost": 3.00,  "cal": 35,   "protein": 4.3, "carbs": 5.5, "quality_score": 10, "min_qty": 0,  "max_qty": 3,
      "package_unit": "5oz bag",       "package_size": 1,    "package_cost": 3.00},
@@ -44,15 +44,15 @@ FOODS = [
      "package_unit": "12oz bag",      "package_size": 1,    "package_cost": 2.50},
     {"name": "Frozen mixed veg", "fine_unit": "bag",   "cost": 1.00,  "cal": 230,  "protein": 9,   "carbs": 47,  "quality_score": 9,  "min_qty": 1,  "max_qty": 3,
      "package_unit": "12oz bag",      "package_size": 1,    "package_cost": 1.00},
-    {"name": "Bell peppers",     "fine_unit": "each",  "cost": 1.00,  "cal": 30,   "protein": 1,   "carbs": 7,   "quality_score": 9,  "min_qty": 0,  "max_qty": 5,
+    {"name": "Bell peppers",     "fine_unit": "each",  "cost": 1.00,  "cal": 30,   "protein": 1,   "carbs": 7,   "quality_score": 10, "min_qty": 0,  "max_qty": 5,
      "package_unit": "each",          "package_size": 1,    "package_cost": 1.00},
     {"name": "Lettuce",          "fine_unit": "head",  "cost": 2.00,  "cal": 25,   "protein": 2,   "carbs": 5,   "quality_score": 7,  "min_qty": 0,  "max_qty": 2,
      "package_unit": "head",          "package_size": 1,    "package_cost": 2.00},
-    {"name": "Tomatoes",         "fine_unit": "each",  "cost": 1.20,  "cal": 22,   "protein": 1,   "carbs": 5,   "quality_score": 8,  "min_qty": 0,  "max_qty": 5,
+    {"name": "Tomatoes",         "fine_unit": "each",  "cost": 1.20,  "cal": 22,   "protein": 1,   "carbs": 5,   "quality_score": 9,  "min_qty": 0,  "max_qty": 5,
      "package_unit": "each",          "package_size": 1,    "package_cost": 1.20},
     {"name": "Onions",           "fine_unit": "each",  "cost": 1.20,  "cal": 45,   "protein": 1,   "carbs": 11,  "quality_score": 6,  "min_qty": 0,  "max_qty": 3,
      "package_unit": "each",          "package_size": 1,    "package_cost": 1.20},
-    {"name": "Carrots",          "fine_unit": "lb",    "cost": 1.13,  "cal": 175,  "protein": 4,   "carbs": 41,  "quality_score": 9,  "min_qty": 0,  "max_qty": 2,
+    {"name": "Carrots",          "fine_unit": "lb",    "cost": 1.13,  "cal": 175,  "protein": 4,   "carbs": 41,  "quality_score": 10, "min_qty": 0,  "max_qty": 2,
      "package_unit": "2lb bag",       "package_size": 2,    "package_cost": 2.26},
     {"name": "Asparagus",        "fine_unit": "bunch", "cost": 3.00,  "cal": 135,  "protein": 9,   "carbs": 22,  "quality_score": 10, "min_qty": 0,  "max_qty": 2,
      "package_unit": "bunch",         "package_size": 1,    "package_cost": 3.00},
@@ -79,39 +79,31 @@ PROTEIN_MAX          = 1050
 CARB_TARGET          = 2100
 VITAMIN_TARGET       = 120
 CAL_MIN              = 14000
-CAL_MAX              = 17500
-RANDOM_NOISE_RANGE   = 0.25
+CAL_MAX              = 19600
 SHORTFALL_PENALTY    = 5.0
 SEMI_CONTINUOUS_FRACTION = 0.5
 
 # ── Floor drop priority — lower number = dropped first when budget is tight ───
-# salmon is priority 5 — dropped after brown rice (4) but before apples (6)
 FLOOR_DROP_PRIORITY = {
     "Frozen salmon":    1,
     "Frozen mixed veg": 2,
     "Broccoli":         3,
     "Greek yogurt":     4,
-    "Brown rice":       5,
-    "Bananas":          6,
-    "Avocado":          7,
-    "Bread":            8,
-    "Milk":             9,
-    "Chicken breast":   10,  # last to drop — core protein
+    "Bananas":          5,
+    "Avocado":          6,
+    "Bread":            7,
+    "Milk":             8,
+    "Chicken breast":   10,
 }
 
 
 def relax_floors_for_budget(foods, weekly_budget):
-    """
-    If mandatory floor costs exceed weekly_budget, progressively zero out
-    floors in priority order (lowest number = drop first) until floors fit.
-    """
     def floor_cost(foods):
         return sum(
             math.ceil(f["min_qty"] / f["package_size"]) * f["package_cost"]
             for f in foods if f.get("min_qty", 0) > 0
         )
 
-    # sort droppable floors by priority ascending
     droppable = sorted(
         [f for f in foods if f.get("min_qty", 0) > 0 and f["name"] in FLOOR_DROP_PRIORITY],
         key=lambda f: FLOOR_DROP_PRIORITY[f["name"]]
@@ -167,13 +159,9 @@ def run_grocery(weekly_budget, foods=FOODS, protein_target=PROTEIN_TARGET,
     carb_shortfall    = LpVariable("carb_shortfall",    lowBound=0)
     cal_shortfall     = LpVariable("cal_shortfall",     lowBound=0)
 
-    noise = {
-        f["name"]: random.uniform(1 - RANDOM_NOISE_RANGE, 1 + RANDOM_NOISE_RANGE)
-        for f in foods
-    }
-
+    # clean objective — quality score only, no noise or bonus multipliers
     prob += (
-        sum(f["quality_score"] * noise[f["name"]] * quantities[f["name"]] for f in foods)
+        sum(f["quality_score"] * quantities[f["name"]] for f in foods)
         - 0.1 * sum((f["cost"] / f["quality_score"]) * quantities[f["name"]] for f in foods)
         - SHORTFALL_PENALTY * protein_shortfall
         - SHORTFALL_PENALTY * carb_shortfall
